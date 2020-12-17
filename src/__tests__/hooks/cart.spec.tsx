@@ -14,7 +14,7 @@ import {
 
 jest.useFakeTimers();
 
-jest.mock('@react-native-community/async-storage', () => ({
+jest.mock('@react-native-async-storage/async-storage', () => ({
   __esModule: true,
   default: {
     setItem: jest.fn(),
@@ -24,7 +24,7 @@ jest.mock('@react-native-community/async-storage', () => ({
   },
 }));
 
-import AsyncStorage from '@react-native-community/async-storage';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { CartProvider, useCart } from '../../hooks/cart';
 
 const TestComponent: React.FC = () => {
